@@ -1,36 +1,9 @@
-@tailwind base;
-@tailwind components;
+@import "./app/config.scss";
+@import "tailwindcss";
 @tailwind utilities;
 
-:root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
 }
-
-*::-webkit-scrollbar, .about::-webkit-scrollbar {
-  width: 1vh;
-}
-
-*::-webkit-scrollbar-thumb, .about::-webkit-scrollbar-thumb {
-background-color: #b8b8b8;
-}
-
-*::-webkit-scrollbar-track, .about::-webkit-scrollbar-track {
-background-color: #f9f9f9;
-}
-
-/* Remove spinner arrows for most browsers */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield; /* For Firefox */
-}
-
-

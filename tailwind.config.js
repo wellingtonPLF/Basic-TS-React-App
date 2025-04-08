@@ -2,15 +2,12 @@
 export default {
   content: ["./src/**/*.{html,tsx}"],
   theme: {
-    extend: {
-      fontFamily: {
-        alkatra: ['Alkatra', 'Arial', 'sans-serif']
-      },
-    },
+    extend: {},
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('tailwind-scrollbar')
+    require('tailwind-scrollbar'),
+    require('@tailwindcss/postcss')
   ],
 }
 
