@@ -67,12 +67,12 @@ export const formPropsHelper = <T>(
   formChanges: ReturnType<typeof useForm<T>>[3]
 ): {
   error?: boolean
-  helperText?: string
+  helpertext?: string
   value: any
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
 } => ({
   error: errors[key] && formChanges[key],
-  helperText: formChanges[key] && errors[key]?.[0],
+  helpertext: formChanges[key] && errors[key]?.[0],
   value: form[key],
   onChange: (event: ChangeEvent<HTMLInputElement>) =>
     setForm((prev) => ({ ...prev, [key]: event.target.value })),
